@@ -1,0 +1,10 @@
+alias vi='vim'
+
+eval "$(rbenv init -)"
+
+be() { bundle exec "$@" ;}
+rb() { rbenv "$@" ;}
+
+if [ -f $HOME/.git-completion.bash ]; then
+    source $HOME/.git-completion.bash
+fi
