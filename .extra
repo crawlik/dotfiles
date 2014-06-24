@@ -8,3 +8,7 @@ rb() { rbenv "$@" ;}
 if [ -f $HOME/.git-completion.bash ]; then
     source $HOME/.git-completion.bash
 fi
+
+# http://stackoverflow.com/questions/1348842/what-should-i-set-java-home-to-on-osx
+export JAVA_HOME=$(/usr/libexec/java_home)
+export MAVEN_HOME=/usr/local/Cellar/maven30/3.0.5
