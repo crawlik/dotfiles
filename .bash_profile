@@ -37,21 +37,3 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # If possible, add tab completion for many more commands
 [ -f /etc/bash_completion ] && source /etc/bash_completion
-
-# Number of lines of history to keep
-export HISTFILESIZE=1000000
-
-# Set how many commands to keep in the current session history list
-export HISTSIZE=80
-
-# Ignore commands that start with a space
-export HISTIGNORE="&:[ ]*:exit"
-
-# avoid duplicates..
-export HISTCONTROL=ignoredups
-
-# After each command, save and reload history
-export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
-
-# Display history timestamp
-export HISTTIMEFORMAT='%F %T '
