@@ -25,3 +25,6 @@ export HISTCONTROL=ignoredups
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 # Display history timestamp
 export HISTTIMEFORMAT='%F %T '
+
+git config --global user.email "alex.vinnik@infochimps.com"
+git config --global user.name "Alex Vinnik"
