@@ -54,6 +54,9 @@ prompt_git() {
         [ -n "${s}" ] && s=" [${s}]";
 
         echo -e "${1}${branchName}${blue}${s}";
+	else
+		return;
+	fi;
 }
 
 if tput setaf 1 &> /dev/null; then
