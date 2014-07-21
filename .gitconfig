@@ -57,6 +57,8 @@
 	# List contributors with number of commits
 	contributors = shortlog --summary --numbered
 
+	co = checkout
+
 [apply]
 
 	# Detect whitespace errors when applying a patch
