@@ -28,3 +28,5 @@ export HISTTIMEFORMAT='%F %T '
 
 git config --global user.email "alex.vinnik@infochimps.com"
 git config --global user.name "Alex Vinnik"
+
+alias op='lsof -i 4tcp -P'
