@@ -16,7 +16,7 @@ export MAVEN_HOME=/usr/local/Cellar/maven30/3.0.5
 # Number of lines of history to keep
 export HISTFILESIZE=1000000
 # Set how many commands to keep in the current session history list
-export HISTSIZE=80
+export HISTSIZE=20000
 # Ignore commands that start with a space
 export HISTIGNORE="&:[ ]*:exit"
 # avoid duplicates..
@@ -30,3 +30,4 @@ git config --global user.email "alex.vinnik@infochimps.com"
 git config --global user.name "Alex Vinnik"
 
 alias op='lsof -i 4tcp -P'
+alias hst='history 100'
