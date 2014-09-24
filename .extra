@@ -28,6 +28,10 @@ export HISTTIMEFORMAT='%F %T '
 
 git config --global user.email "alex.vinnik@infochimps.com"
 git config --global user.name "Alex Vinnik"
+# Show commit difference between tip of current branch and upstream master
+git config --global alias.surprise 'log --pretty=oneline --graph --abbrev-commit HEAD..upstream/master'
+# Show code difference between tip of current branch and upstream master
+git config --global alias.wsup 'diff --stat HEAD..upstream/master'
 
 alias op='lsof -i 4tcp -P'
 alias hst='history 100'
