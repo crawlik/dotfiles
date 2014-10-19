@@ -35,3 +35,14 @@ git config --global alias.wsup 'diff --stat HEAD..upstream/master'
 
 alias op='lsof -i 4tcp -P'
 alias hst='history 100'
+
+# Boot2Docker profile
+export BOOT2DOCKER_PROFILE=~/.boot2docker/profile
+
+
+# BEGIN Ruboto setup
+if [ -f ~/.rubotorc ]; then
+    source ~/.rubotorc
+fi
+# END Ruboto setup
+
