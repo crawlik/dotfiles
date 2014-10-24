@@ -46,3 +46,4 @@ if [ -f ~/.rubotorc ]; then
 fi
 # END Ruboto setup
 
+alias vagrant='/usr/bin/vagrant'
