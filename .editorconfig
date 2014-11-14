@@ -10,15 +10,20 @@ trim_trailing_whitespace = true
 
 [*.vim]
 indent_size = 4
-max_line_length = 80
+max_line_length = 100
 
 [*.rb]
 indent_size = 2
-max_line_length = 120
+max_line_length = 100
 
 [*.yml]
 indent_size = 2
+max_line_length = 100
 
 [*.py]
 indent_size = 4
-max_line_length = 120
+max_line_length = 100
+
+[*.pp]
+indent_size = 2
+max_line_length = 100
