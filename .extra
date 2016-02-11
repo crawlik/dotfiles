@@ -47,3 +47,5 @@ fi
 # END Ruboto setup
 
 alias vagrant='/usr/bin/vagrant'
+
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
