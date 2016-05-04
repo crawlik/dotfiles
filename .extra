@@ -39,17 +39,21 @@ alias hst='history 100'
 # Boot2Docker profile
 export BOOT2DOCKER_PROFILE=~/.boot2docker/profile
 
-
 # BEGIN Ruboto setup
 if [ -f ~/.rubotorc ]; then
     source ~/.rubotorc
 fi
 # END Ruboto setup
 
-alias vagrant='/usr/bin/vagrant'
-
 export PYENV_ROOT=/usr/local/var/pyenv
 
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+
+export MAVEN_OPTS='-Xms512m -Xmx1024m -XX:MaxPermSize=512m'
+
+for file in ~/*.cred ; do
+  [ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file;
