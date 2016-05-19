@@ -23,3 +23,7 @@ export GREP_OPTIONS="--color=auto";
 
 # Link Homebrew casks in `/Applications` rather than `~/Applications`
 export HOMEBREW_CASK_OPTS="--appdir=/Applications";
+
+# project specific exports
+# handle with care
+export CHEF_VERSION="11.12.2"
