@@ -26,7 +26,7 @@ export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; histor
 # Display history timestamp
 export HISTTIMEFORMAT='%F %T '
 
-git config --global user.email "alex.vinnik@infochimps.com"
+git config --global user.email "avinnik@spredfast.com"
 git config --global user.name "Alex Vinnik"
 # Show commit difference between tip of current branch and upstream master
 git config --global alias.surprise 'log --pretty=oneline --graph --abbrev-commit HEAD..upstream/master'
