@@ -1,9 +1,6 @@
 alias vi='vim'
 
-eval "$(rbenv init -)"
-
 be() { bundle exec "$@" ;}
-rb() { rbenv "$@" ;}
 
 if [ -f $HOME/.git-completion.bash ]; then
     source $HOME/.git-completion.bash
@@ -26,7 +23,7 @@ export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; histor
 # Display history timestamp
 export HISTTIMEFORMAT='%F %T '
 
-git config --global user.email "avinnik.g@gmail.com"
+git config --global user.email "alex.vinnik@bazaarvoice.com"
 git config --global user.name "Alex Vinnik"
 # Show commit difference between tip of current branch and upstream master
 git config --global alias.surprise 'log --pretty=oneline --graph --abbrev-commit HEAD..upstream/master'
@@ -57,3 +54,17 @@ for file in ~/*.cred ; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
+
+# `aws` command tab completion
+complete -C aws_completer aws
+
+# Tab completion for any commands installed by Homebrew that support it
+# Examples - git, brew
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+        . $(brew --prefix)/etc/bash_completion
+fi
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
