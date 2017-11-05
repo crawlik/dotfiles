@@ -29,6 +29,8 @@ git config --global user.name "Alex Vinnik"
 git config --global alias.surprise 'log --pretty=oneline --graph --abbrev-commit HEAD..upstream/master'
 # Show code difference between tip of current branch and upstream master
 git config --global alias.wsup 'diff --stat HEAD..upstream/master'
+# pull latest and rebase my commits and local changes on the top of that
+git config --global alias.up 'pull --rebase --autostash'
 
 alias op='lsof -i 4tcp -P'
 alias hst='history 100'
@@ -68,3 +70,32 @@ fi
 export PATH="$PATH:$HOME/.rvm/bin"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+export PATH="$HOME/anaconda2/bin:$PATH"
+if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+
+# flynn
+export BVFLYNN_TEAM=infrastructure-dev@bazaarvoice.com
+export BVFLYNN_ADMIN=true
+export BVFLYNN_SSH_KEY=bv-infrastructure
+export BVFLYNN_ENDPOINT=sbx-qa-us-east-1
+
+# Add Go installed binaries
+export PATH=$PATH:$(go env GOPATH)/bin
+export GOPATH=$(go env GOPATH)
+
+# OpenAI
+
+# added by Miniconda3 4.3.21 installer
+export PATH="/Users/alex.vinnik/miniconda3/bin:$PATH"
+
+# https://conda.io/docs/install/tab-completion.html#tab-completion
+eval "$(register-python-argcomplete conda)"
+
+# NodeJS + NVM
+source "/usr/local/opt/nvm/nvm.sh"
+
+# Hook direnv to teh prompt
+# Must be last thing
+# https://direnv.net/
+eval "$(direnv hook bash)"
